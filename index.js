@@ -15,7 +15,7 @@ const PORT = 9000;
 //Inbuilt Middleware
 //interceptor | converting body to JSON
 app.use(express.json());
-
+app.use(cors());
 //mongodb connection
 
 async function createConnection()
