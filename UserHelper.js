@@ -2,7 +2,7 @@ import { client } from "./index.js";
 
 import bcrypt from "bcrypt";
 
-export default async function userdetails(req)
+export  async function UserHelper(req)
 {
 
 return await client
