@@ -5,7 +5,7 @@ import { booksRouter } from "./Routes/BookRoute.js";
 import { mentorRouter } from "./Routes/MentorRoute.js";
 import { studentRouter } from "./Routes/StudentRoute.js";
 import { Users } from "./Routes/UserRoutes.js";
-import cors from 'cors';
+import { cors } from 'cors';
 dotenv.config();
 const app = express();
 // req ->  what we request/send to server
