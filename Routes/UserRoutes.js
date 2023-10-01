@@ -3,7 +3,9 @@ import { UserHelper } from "../UserHelper.js";
 
 const router = express.Router();
 
-router.get("/", async(req, res) =>
+router.get("/", async (req, res) =>
+
+
 {
 
      const book = await UserHelper(req);
@@ -11,3 +13,5 @@ router.get("/", async(req, res) =>
 
 
 })
+
+export const Users = router;

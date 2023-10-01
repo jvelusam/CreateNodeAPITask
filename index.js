@@ -4,7 +4,7 @@ import * as dotenv from "dotenv";
 import { booksRouter } from "./Routes/BookRoute.js";
 import { mentorRouter } from "./Routes/MentorRoute.js";
 import { studentRouter } from "./Routes/StudentRoute.js";
-import { userRouter } from "./Routes/UserRoutes.js";
+import { Users } from "./Routes/UserRoutes.js";
 dotenv.config();
 const app = express();
 // req ->  what we request/send to server
@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/books", booksRouter);
-app.use("/getusers", userRouter);
+app.use("/getusers", UserRoutes);
 app.use("/mentor", mentorRouter);
 
 app.use("/student", studentRouter);
