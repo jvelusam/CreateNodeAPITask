@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/books", booksRouter);
-app.use("/getusers", UserRoutes);
+app.use("/getusers", Users);
 app.use("/mentor", mentorRouter);
 
 app.use("/student", studentRouter);
