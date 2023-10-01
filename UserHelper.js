@@ -6,7 +6,7 @@ export  async function UserHelper(req)
 {
 
 return await client
-    .db("Products")
+    .db("b46-we")
     .collection("UserInfo")
     .find({})
     .toArray(function (err, result) {
