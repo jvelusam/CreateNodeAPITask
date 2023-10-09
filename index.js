@@ -5,6 +5,8 @@ import { booksRouter } from "./Routes/BookRoute.js";
 import { mentorRouter } from "./Routes/MentorRoute.js";
 import { studentRouter } from "./Routes/StudentRoute.js";
 import { Users } from "./Routes/UserRoutes.js";
+import { ForgotPassword } from "./Routes/ForgotPassword.js";
+import { ResetPassword } from "./Routes/ResetPassword.js";
 dotenv.config();
 const app = express();
 // req ->  what we request/send to server
@@ -18,8 +20,7 @@ app.use(express.json());
 
 //mongodb connection
 
-async function createConnection()
-{
+async function createConnection() {
   const client = new MongoClient(MONGO_URL);
   await client.connect();
   console.log("MongoDB is connected");
@@ -38,8 +39,8 @@ app.use("/getusers", Users);
 app.use("/mentor", mentorRouter);
 
 app.use("/student", studentRouter);
-
-
+app.use("/forgotpassword", ForgotPassword);
+app.use("/resetpassword", ResetPassword);
 
 // app.get("/", async  ( req, res) =>
 // {
