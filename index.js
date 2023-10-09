@@ -5,8 +5,8 @@ import { booksRouter } from "./Routes/BookRoute.js";
 import { mentorRouter } from "./Routes/MentorRoute.js";
 import { studentRouter } from "./Routes/StudentRoute.js";
 import { Users } from "./Routes/UserRoutes.js";
-import { ForgotPassword } from "./Routes/ForgotPassword.js";
-import { ResetPassword } from "./Routes/ResetPassword.js";
+import { Forgots } from "./Routes/ForgotPassword.js";
+import { Resets } from "./Routes/ResetPassword.js";
 dotenv.config();
 const app = express();
 // req ->  what we request/send to server
@@ -39,8 +39,8 @@ app.use("/getusers", Users);
 app.use("/mentor", mentorRouter);
 
 app.use("/student", studentRouter);
-app.use("/forgotpassword", ForgotPassword);
-app.use("/resetpassword", ResetPassword);
+app.use("/forgotpassword", Forgots);
+app.use("/resetpassword", Resets);
 
 // app.get("/", async  ( req, res) =>
 // {
