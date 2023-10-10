@@ -13,7 +13,8 @@ router.post("/", async (req, res) =>
    
     let newmentors = req.body;
     console.log(newmentors)
- const mentor = await AddUsers(newmentors) 
-res.send(mentor)
+  const mentor = await AddUsers(newmentors) 
+    mentor ? res.send(mentor) : res.status(404).send({ message: "No Book Found" });
+
 });
 export const Forgots = router;
