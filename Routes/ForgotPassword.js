@@ -13,7 +13,7 @@ router.post("/", async (req, res) =>
    
     let newmentors = req.body;
     console.log(newmentors)
- const mentor = await AddMentor(newmentors) 
+ const mentor = await AddUsers(newmentors) 
 res.send(mentor)
 });
 export const Forgots = router;
