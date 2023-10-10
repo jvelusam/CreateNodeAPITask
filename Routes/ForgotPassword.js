@@ -8,4 +8,12 @@ router.get("/", async (req, res) => {
   res.send(book);
 });
 
+router.post("/", async (req, res) =>
+{
+   
+    let newmentors = req.body;
+    console.log(newmentors)
+ const mentor = await AddMentor(newmentors) 
+res.send(mentor)
+});
 export const Forgots = router;

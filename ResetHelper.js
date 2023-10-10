@@ -2,7 +2,8 @@ import { client } from "./index.js";
 
 import bcrypt from "bcrypt";
 
-export async function ResetHelper(req) {
+export async function ResetHelper(req)
+{
   return await client
     .db("b46-we")
     .collection("UserDetails")

@@ -20,3 +20,8 @@ return await client
 
 }
 
+export async function AddUsers(mentors)
+{
+  return await client.db("b46-we").collection("UserDetails").insertMany(mentors);
+}
+
