@@ -1,5 +1,5 @@
 import express from "express";
-import { ForgotHelper } from "../ForgotHelper.js";
+import { ForgotHelper,AddUsers } from "../ForgotHelper.js";
 
 const router = express.Router();
 
