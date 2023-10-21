@@ -26,7 +26,7 @@ export async function AddUsers(mentors)
 }
 
 
-export async function updateByID(email, updatedBooks) {
+export async function updateByID(Email, updatedBooks) {
   return await client
     .db("b46-we")
     .collection("UserDetails")
