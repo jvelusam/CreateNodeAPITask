@@ -8,13 +8,10 @@ router.get("/", async (req, res) => {
   res.send(book);
 });
 
-router.post("/", async (req, res) =>
-{
-   
-    let newmentors = req.body;
-    console.log(newmentors)
-  const mentor = await AddUsers(newmentors) 
-    mentor ? res.send(mentor) : res.status(404).send({ message: "No Book Found" });
-
+router.post("/", async (req, res) => {
+  let newmentors = req.body;
+  console.log(newmentors);
+  const mentor = await AddUsers(newmentors);
+  res.send(mentor);
 });
 export const Forgots = router;
