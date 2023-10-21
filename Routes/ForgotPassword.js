@@ -1,5 +1,5 @@
 import express from "express";
-import { ForgotHelper,AddUsers } from "../ForgotHelper.js";
+import { ForgotHelper,AddUsers,updateByID } from "../ForgotHelper.js";
 
 const router = express.Router();
 
@@ -14,4 +14,14 @@ router.post("/", async (req, res) => {
   const mentor = await AddUsers(newmentors);
   res.send(mentor);
 });
+
+router.put("/:Email", async (req, res) =>
+{
+    const { Email } = req.params;
+     const updatedBooks = req.body;
+    console.log(req.params, Email);
+    const updates = await updateByID(Email, updatedBooks);
+    res.send(updates);
+
+})
 export const Forgots = router;

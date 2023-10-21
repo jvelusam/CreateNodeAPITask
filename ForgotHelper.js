@@ -22,6 +22,13 @@ return await client
 //insertMany
 export async function AddUsers(mentors)
 {
- return await client.db("NodeJSAPI").collection("Mentor").insertMany(mentors);
+ return await client.db("b46-we").collection("UserDetails").insertMany(mentors);
 }
 
+
+export async function updateByID(email, updatedBooks) {
+  return await client
+    .db("b46-we")
+    .collection("UserDetails")
+    .updateOne({ Email: email }, { $set: updatedBooks });
+}
