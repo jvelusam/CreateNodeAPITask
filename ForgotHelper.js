@@ -30,5 +30,5 @@ export async function updateByID(email, updatedBooks) {
   return await client
     .db("b46-we")
     .collection("UserDetails")
-    .updateOne({ Email: email }, { $set: updatedBooks });
+    .updateOne({ Email: Email }, { $set: updatedBooks });
 }
