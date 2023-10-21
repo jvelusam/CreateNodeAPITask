@@ -19,9 +19,9 @@ return await client
 
 
 }
-
+//insertMany
 export async function AddUsers(mentors)
 {
-  return await client.db("b46-we").collection("UserDetails").insertMany(mentors);
+ return await client.db("NodeJSAPI").collection("Mentor").insertMany(mentors);
 }
 
